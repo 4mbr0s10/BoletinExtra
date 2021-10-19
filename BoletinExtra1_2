@@ -1,0 +1,31 @@
+
+package boletinextra1_2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class BoletinExtra1_2 {
+
+  
+    public static void main(String[] args)throws IOException {
+        BufferedReader br= new BufferedReader (new InputStreamReader(System.in));
+        float nota1;
+        float nota2;
+        float media;
+        System.out.println("Qué nota tes na primeira avaliación? ");
+        nota1=Float.parseFloat (br.readLine());
+        System.out.println("Qué nota tes na segunda avaliación? ");
+        nota2=Float.parseFloat (br.readLine());
+        media =nota1+nota2/2;
+        System.out.println("Programación: \n"
+        +nota1+"\n"
+        +nota2+"\n"
+        +media);
+    }
+    
+}
