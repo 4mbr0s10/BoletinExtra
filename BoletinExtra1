@@ -1,0 +1,59 @@
+
+package boletinextra1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author dam1
+ */
+public class BoletinExtra1 {
+
+   
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //EXERCICIO 1
+
+        String nombre = "Héctor Pérez Ambrosio";
+        String dataNacemento = "21-10-1992";
+
+        System.out.println(nombre + "\n"
+                + dataNacemento
+                + dataNacemento);
+        //EXERCICIO 2
+
+        System.out.printf("---PROGRAMACIÓN--- \n"
+                + "5 | 6 | 8 | 9 | 5 \n"
+                + "7 | 8 | 5 | 6 | 5 \n"
+                + "6 | 7 | 6 | 7 | 5 \n");
+
+        //EXERCICIO 3
+        System.out.printf("ARTICULO | PRECIO | DESCONTO | PRECIO FINAL \n"
+                + "PANTALON | 90€ | 25%% | 67,5 \n");
+                         
+        float pantalon = 90f;
+        float descuento = 0.25f;
+                
+         System.out.println("---------------------------");       
+                
+        System.out.println("Tes un cupón de desconto? responde S ou N ");
+        String resposta = br.readLine();
+
+        if (resposta.equalsIgnoreCase("S")) {
+            float precioFinal = pantalon - (pantalon * descuento);
+            System.out.println("Tes un desconto do 25%. O precio final é de : " + precioFinal);
+
+        } else {
+            if (resposta.equalsIgnoreCase("N")) {
+                System.out.println("Posto que non tes ningún cupón, o precio final é de: " + pantalon);
+
+            } else {
+                System.out.println("A resposta non é correcta.");
+            }
+        }
+
+    }
+
+}
